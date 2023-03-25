@@ -13,6 +13,7 @@ namespace dae
 	{
 	public:
 		void Update(float deltaTime);
+		void FixedUpdate(float fixedTime);
 		void Render() const;
 
 		void SetTexture(const std::string& filename);

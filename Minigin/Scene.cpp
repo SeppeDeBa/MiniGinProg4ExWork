@@ -61,6 +61,17 @@ void Scene::Update( float deltaTime )
 	}
 }
 
+void dae::Scene::FixedUpdate(float fixedTime)
+{
+	for (GameObject* c : m_pGameObjects)
+	{
+		if (!c->HasParent())
+		{
+			c->FixedUpdate(fixedTime);
+		}
+	}
+}
+
 void Scene::Render() const
 {
 	for (GameObject* c : m_pGameObjects)

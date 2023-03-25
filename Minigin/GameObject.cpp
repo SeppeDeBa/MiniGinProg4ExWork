@@ -39,6 +39,20 @@ void dae::GameObject::Update(float deltaTime)
 	}
 }
 
+void dae::GameObject::FixedUpdate(float fixedTime)
+{
+	//update self
+	for (std::shared_ptr<dae::Component> component : m_pVectorComponents)
+	{
+		component->FixedUpdate(fixedTime);
+	}
+	//update children
+	for (dae::GameObject* go : m_pVectorChildren)
+	{
+		go->FixedUpdate(fixedTime);
+	}
+}
+
 //CAN ADD A FIXED UPDATE, NOT NECESSARY YET
 void dae::GameObject::Render() const
 {
