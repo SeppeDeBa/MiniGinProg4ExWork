@@ -8,11 +8,11 @@ namespace dae
 	public:
 		GameObjectCommand(GameObject* actor);
 		virtual ~GameObjectCommand();
-		virtual void Execute() = 0;
+		virtual void Execute(float [[maybe_unused]] deltaTime) = 0;
 	protected:
 		GameObject* GetGameActorPtr() const;
+		GameObject* m_pGameObject;
 	private:
-		GameObject* m_GameObject;
 	};
 }
 

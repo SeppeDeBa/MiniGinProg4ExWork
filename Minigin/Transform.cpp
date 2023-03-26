@@ -42,6 +42,21 @@ void dae::Transform::SetLocalPosition(const glm::vec3& vecInput)
 	GetGameObject()->SetPositionDirty();
 }
 
+void dae::Transform::AddToLocalPosition(float x, float y)
+{
+	m_localPosition.x += x;
+	m_localPosition.y += y;
+	GetGameObject()->SetPositionDirty();
+}
+
+void dae::Transform::AddToLocalPosition(float x, float y, float z)
+{
+	m_localPosition.x += x;
+	m_localPosition.y += y;
+	m_localPosition.z += z;
+	GetGameObject()->SetPositionDirty();
+}
+
 void dae::Transform::SetDirty()
 {
 	m_positionIsDirty = true;
@@ -71,6 +86,5 @@ glm::vec3 dae::Transform::GetWorldPosition()
 		UpdateWorldPosition();
 	}
 	return m_worldPosition;
-
 }
 

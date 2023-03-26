@@ -14,6 +14,9 @@ namespace dae
 		void SetLocalPosition(float x, float y, float z);
 		void SetLocalPosition(float x, float y);
 		void SetLocalPosition(const glm::vec3& vecInput);
+		void AddToLocalPosition(float x, float y);
+		void AddToLocalPosition(float x, float y, float z);
+
 		Transform& referToThis() override { return *this; };
 		void SetDirty();
 		
