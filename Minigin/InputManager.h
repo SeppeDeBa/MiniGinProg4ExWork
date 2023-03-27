@@ -12,7 +12,7 @@ namespace dae
 		//class InputManagerImpl;
 		//std::unique_ptr<InputManagerImpl> m_pImpl;
 		
-		using ControllerKey = std::pair<unsigned, dae::Controller::ControllerButton>;
+		using ControllerKey = std::pair<unsigned int, dae::Controller::ControllerButton>;
 		using ControllerCommandsMap = std::map<ControllerKey, std::unique_ptr<Command>>;
 		ControllerCommandsMap m_controllerCommands{};
 
@@ -24,8 +24,7 @@ namespace dae
 	public:
 		bool ProcessInput();
 		InputManager();
-		void AddConsoleCommand(unsigned int controllerIndex, Controller::ControllerButton button, Command* command);
-		void SetUpArrow(Command* command) { arrowUp = std::make_unique<Command>(command);};
+		void AddConsoleCommand(unsigned int controllerIndex, Controller::ControllerButton button, std::unique_ptr<dae::Command>& command);
+	//	void SetUpArrow(Command* command) { arrowUp = std::make_unique<Command>(command);};
 	};
-
 }

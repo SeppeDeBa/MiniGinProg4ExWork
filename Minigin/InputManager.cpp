@@ -27,7 +27,6 @@
 //
 //
 //
-//
 //		SDL_Event e;
 //		while (SDL_PollEvent(&e)) {
 //			if (e.type == SDL_QUIT) {
@@ -123,17 +122,15 @@ dae::InputManager::InputManager()
 	}
 }
 
-//
-void dae::InputManager::AddConsoleCommand(unsigned int controllerIndex, Controller::ControllerButton button, Command* command)
+
+void dae::InputManager::AddConsoleCommand(unsigned int controllerIndex, Controller::ControllerButton button, std::unique_ptr<Command>& command)
 {
 	if (controllerIndex <= m_VectorControllers.size() - 1)
 	{
 		
-		std::pair<unsigned, Controller::ControllerButton> controllerKey{ std::pair<unsigned, Controller::ControllerButton>(controllerIndex, button) };
+		ControllerKey controllerKey = std::make_pair(controllerIndex, button);
 		
-		//m_controllerCommands[controllerKey] = std::make_unique<Command>(command);
-
-
+		m_controllerCommands.insert(std::make_pair(controllerKey, std::move(command)));
 	}
 	else
 	{
