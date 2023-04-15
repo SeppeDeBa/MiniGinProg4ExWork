@@ -6,7 +6,7 @@ namespace dae
 	{
 		class ControllerImpl;
 		std::unique_ptr<ControllerImpl> m_pImpl;
-
+		unsigned int m_controllerIndex;
 	public:
 		enum class ControllerButton
 		{
@@ -31,12 +31,12 @@ namespace dae
 		};
 
 		void Update();
-
+		unsigned int GetControlledIdx() const { return m_controllerIndex; };
 		bool IsDown(ControllerButton button) const;
-		bool isUp(ControllerButton button) const;
+		bool IsUp(ControllerButton button) const;
 		bool IsPressed(ControllerButton button) const;
 
-		explicit Controller(int controllerIndex);
+		explicit Controller(unsigned int controllerIndex);
 		~Controller();
 		
 	};

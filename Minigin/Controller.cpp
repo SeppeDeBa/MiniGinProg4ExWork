@@ -14,10 +14,10 @@ class Controller::ControllerImpl
 
 	WORD buttonsPressedThisFrame;
 	WORD buttonsReleasedThisFrame;
+	unsigned int m_controllerIndex;
 
-	int m_controllerIndex;
 public: 
-	ControllerImpl(int controllerIndex)
+	ControllerImpl(unsigned int controllerIndex)
 	{
 		m_controllerIndex = controllerIndex;
 		ZeroMemory(&previousState, sizeof(XINPUT_STATE));
@@ -61,7 +61,7 @@ bool dae::Controller::IsDown(ControllerButton button) const
 	return m_pImpl->IsDownThisFrame(static_cast<unsigned int>(button)); //cast to use for & operator 
 }
 
-bool dae::Controller::isUp(ControllerButton button) const
+bool dae::Controller::IsUp(ControllerButton button) const
 {
 	return m_pImpl->IsUpThisFrame(static_cast<unsigned int>(button));
 }
@@ -71,7 +71,8 @@ bool dae::Controller::IsPressed(ControllerButton button) const
 	return m_pImpl->IsPressed(static_cast<unsigned int>(button));
 }
 
-dae::Controller::Controller(int controllerIndex)
+dae::Controller::Controller(unsigned int controllerIndex)
+	:m_controllerIndex{controllerIndex}
 {
 	m_pImpl = std::make_unique<ControllerImpl>(controllerIndex);
 }
