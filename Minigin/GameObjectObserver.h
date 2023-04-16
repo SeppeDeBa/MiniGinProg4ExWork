@@ -1,6 +1,7 @@
 #pragma once
 #include "ObserverBase.h"
 #include "GameObject.h"
+#include "SubjectBase.h"
 
 //NOTE:
 //Create this seperately from just any watcher to not have to do dynamic casts every time to use GO functions in inherited classes from this one!
@@ -8,7 +9,7 @@
 class GameObjectObserver : public ObserverBase 
 {
 public:
-	GameObjectObserver(dae::GameObject* GOToWatch, int message = 0)
+	GameObjectObserver(dae::GameObject* GOToWatch, SubjectBase::messageTypes message = SubjectBase::messageTypes::ALL)
 		:m_watchedGO{ GOToWatch }
 		, m_message{ message }
 	{
@@ -34,6 +35,6 @@ protected:
 
 private:
 	dae::GameObject* m_watchedGO;//Game Objects are BaseSubjects
-	int m_message;
+	SubjectBase::messageTypes m_message;
 	
 };

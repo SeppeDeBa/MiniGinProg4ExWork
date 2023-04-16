@@ -29,11 +29,18 @@ namespace dae
 		// helper function
 		std::string GetOutputString(const int playerNumber, int healthValue) const
 		{
-			std::string outputString{ "player " };
-			outputString += std::to_string(playerNumber);
-			outputString += "health: ";
-			outputString += std::to_string(healthValue);
-			return outputString;
+				std::string outputString{ "player " };
+				outputString += std::to_string(playerNumber);
+			if (healthValue > 0)
+			{
+				outputString += " health: ";
+				outputString += std::to_string(healthValue);
+			}
+			else
+			{
+				outputString += " is dead!";
+			}
+				return outputString;
 		};
 	};
 }

@@ -13,6 +13,7 @@ dae::TextComponent::TextComponent(GameObject* pOwner, const std::string& text, s
 	, m_font{std::move(font)}
 	, m_textString{text}
 	, m_needsUpdate{ true }
+
 {
 
 }

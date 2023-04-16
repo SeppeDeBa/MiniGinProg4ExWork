@@ -40,6 +40,18 @@
     <Filter Include="Game Files\ObjectStats">
       <UniqueIdentifier>{f1e7d0a8-a29d-4c41-805d-43aa414af356}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game Files\Components\TextComponents">
+      <UniqueIdentifier>{5ee8d594-b68a-483d-8772-44cdd9d13c11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\Components\Stats">
+      <UniqueIdentifier>{8632dad0-becd-4e06-90b0-280ac81dbc20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\Components\Location">
+      <UniqueIdentifier>{bf7e8952-d592-4591-8f77-39eb5403fa48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\Components\Base">
+      <UniqueIdentifier>{f7073148-acda-4731-ab7d-63fd83046d08}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h">
@@ -105,25 +117,13 @@
     <ClInclude Include="imstb_truetype.h">
       <Filter>Game Files\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="Component.h">
-      <Filter>Game Files\Components</Filter>
-    </ClInclude>
     <ClInclude Include="FPSComponent.h">
       <Filter>Game Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="InputComponent.h">
       <Filter>Game Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="RotatorComponent.h">
-      <Filter>Game Files\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="TextComponent.h">
-      <Filter>Game Files\Components</Filter>
-    </ClInclude>
     <ClInclude Include="TextureComponent.h">
-      <Filter>Game Files\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Transform.h">
       <Filter>Game Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Command.h">
@@ -150,13 +150,34 @@
     <ClInclude Include="ObserverBase.h">
       <Filter>Game Files\ObserverAndSubjects\Observers</Filter>
     </ClInclude>
+    <ClInclude Include="DamageCommand.h">
+      <Filter>Game Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="TextComponent.h">
+      <Filter>Game Files\Components\TextComponents</Filter>
+    </ClInclude>
     <ClInclude Include="HealthUIObserverComp.h">
-      <Filter>Game Files\Components</Filter>
+      <Filter>Game Files\Components\TextComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreComponent.h">
+      <Filter>Game Files\Components\Stats</Filter>
     </ClInclude>
     <ClInclude Include="HealthComponent.h">
-      <Filter>Game Files\Components</Filter>
+      <Filter>Game Files\Components\Stats</Filter>
     </ClInclude>
-    <ClInclude Include="DamageCommand.h">
+    <ClInclude Include="Transform.h">
+      <Filter>Game Files\Components\Location</Filter>
+    </ClInclude>
+    <ClInclude Include="RotatorComponent.h">
+      <Filter>Game Files\Components\Location</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Game Files\Components\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreUIObserverComp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreCommand.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -194,15 +215,6 @@
     <ClCompile Include="Minigin.cpp">
       <Filter>Game Files</Filter>
     </ClCompile>
-    <ClCompile Include="Component.cpp">
-      <Filter>Game Files\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="TextComponent.cpp">
-      <Filter>Game Files\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>Game Files\Components</Filter>
-    </ClCompile>
     <ClCompile Include="FPSComponent.cpp">
       <Filter>Game Files\Components</Filter>
     </ClCompile>
@@ -211,9 +223,6 @@
     </ClCompile>
     <ClCompile Include="RenderComponent.cpp">
       <Filter>Game Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RotatorComponent.cpp">
-      <Filter>Game Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="imgui.cpp">
       <Filter>Game Files\ImGui</Filter>
@@ -266,13 +275,34 @@
     <ClCompile Include="ObserverBase.cpp">
       <Filter>Game Files\ObserverAndSubjects\Observers</Filter>
     </ClCompile>
+    <ClCompile Include="DamageCommand.cpp">
+      <Filter>Game Files\Commands</Filter>
+    </ClCompile>
+    <ClCompile Include="TextComponent.cpp">
+      <Filter>Game Files\Components\TextComponents</Filter>
+    </ClCompile>
     <ClCompile Include="HealthUIObserverComp.cpp">
-      <Filter>Game Files\Components</Filter>
+      <Filter>Game Files\Components\TextComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreComponent.cpp">
+      <Filter>Game Files\Components\Stats</Filter>
     </ClCompile>
     <ClCompile Include="HealthComponent.cpp">
-      <Filter>Game Files\Components</Filter>
+      <Filter>Game Files\Components\Stats</Filter>
     </ClCompile>
-    <ClCompile Include="DamageCommand.cpp">
+    <ClCompile Include="Transform.cpp">
+      <Filter>Game Files\Components\Location</Filter>
+    </ClCompile>
+    <ClCompile Include="RotatorComponent.cpp">
+      <Filter>Game Files\Components\Location</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Game Files\Components\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreUIObserverComp.cpp">
+      <Filter>Game Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreCommand.cpp">
       <Filter>Game Files</Filter>
     </ClCompile>
   </ItemGroup>
