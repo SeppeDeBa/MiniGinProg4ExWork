@@ -84,7 +84,7 @@ void dae::Minigin::Run(const std::function<void()>& load)
 	auto& renderer = Renderer::GetInstance();
 	auto& sceneManager = SceneManager::GetInstance();
 	auto& input = InputManager::GetInstance();
-	// todo: this update loop could use some work.
+
 	bool doContinue = true;
 
 	const int frameTimeMs{int(1000.f / m_desiredFPS )};

@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
@@ -13,17 +9,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Components">
-      <UniqueIdentifier>{17909d9a-9a50-43b9-930a-2f6b13b60da9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Components">
       <UniqueIdentifier>{c9c8b9df-3618-4dbb-b8f6-ab37abbabe27}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\ImGui">
+    <Filter Include="Game Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Game Files\Components">
+      <UniqueIdentifier>{17909d9a-9a50-43b9-930a-2f6b13b60da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\ImGui">
       <UniqueIdentifier>{29f1e9a1-2fc9-4cf1-b028-ea64363e2fd0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Commands">
+    <Filter Include="Game Files\Commands">
       <UniqueIdentifier>{94b71eb1-1b99-471e-bdd4-10247eb27e98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\ObserverAndSubjects">
+      <UniqueIdentifier>{3efd0a4e-cb5d-4968-9bca-8a9ee37d1c6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\ObserverAndSubjects\Observers">
+      <UniqueIdentifier>{965b265f-3d12-4608-9c24-0ddf84a919cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\ObserverAndSubjects\Subjects">
+      <UniqueIdentifier>{9020ea02-7c99-40df-bce3-bb2354ba4042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\ObserverAndSubjects\Observers\GameObjObservers">
+      <UniqueIdentifier>{8fbb35f5-3b29-4509-9c5f-2de3f793f68b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -67,58 +79,58 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="imgui.h">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imgui_impl_opengl2.h">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imgui_impl_sdl2.h">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imgui_internal.h">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imgui_plot.h">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imstb_rectpack.h">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imstb_textedit.h">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="imstb_truetype.h">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Component.h">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="FPSComponent.h">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="InputComponent.h">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="RotatorComponent.h">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="TextComponent.h">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="TextureComponent.h">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Transform.h">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Command.h">
-      <Filter>Source Files\Commands</Filter>
+      <Filter>Game Files\Commands</Filter>
     </ClInclude>
     <ClInclude Include="GameObjectCommand.h">
-      <Filter>Source Files\Commands</Filter>
+      <Filter>Game Files\Commands</Filter>
     </ClInclude>
     <ClInclude Include="MoveCommand.h">
-      <Filter>Source Files\Commands</Filter>
+      <Filter>Game Files\Commands</Filter>
     </ClInclude>
     <ClInclude Include="MyUtils.h">
       <Filter>Header Files</Filter>
@@ -126,103 +138,121 @@
     <ClInclude Include="Controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SubjectBase.h">
+      <Filter>Game Files\ObserverAndSubjects\Subjects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectObserver.h">
+      <Filter>Game Files\ObserverAndSubjects\Observers\GameObjObservers</Filter>
+    </ClInclude>
+    <ClInclude Include="ObserverBase.h">
+      <Filter>Game Files\ObserverAndSubjects\Observers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ResourceManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="Renderer.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="Texture2D.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="SceneManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="TextObject.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="Font.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="Minigin.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="Component.cpp">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="TextComponent.cpp">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="Transform.cpp">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="FPSComponent.cpp">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="TextureComponent.cpp">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="RenderComponent.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="RotatorComponent.cpp">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="imgui.cpp">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_demo.cpp">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_draw.cpp">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_impl_opengl2.cpp">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_impl_sdl2.cpp">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_plot.cpp">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_tables.cpp">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="imgui_widgets.cpp">
-      <Filter>Source Files\ImGui</Filter>
+      <Filter>Game Files\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="InputComponent.cpp">
-      <Filter>Source Files\Components</Filter>
+      <Filter>Game Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="Command.cpp">
-      <Filter>Source Files\Commands</Filter>
+      <Filter>Game Files\Commands</Filter>
     </ClCompile>
     <ClCompile Include="GameObjectCommand.cpp">
-      <Filter>Source Files\Commands</Filter>
+      <Filter>Game Files\Commands</Filter>
     </ClCompile>
     <ClCompile Include="MoveCommand.cpp">
-      <Filter>Source Files\Commands</Filter>
+      <Filter>Game Files\Commands</Filter>
     </ClCompile>
     <ClCompile Include="MyUtils.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
     </ClCompile>
     <ClCompile Include="Controller.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Game Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubjectBase.cpp">
+      <Filter>Game Files\ObserverAndSubjects\Subjects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectObserver.cpp">
+      <Filter>Game Files\ObserverAndSubjects\Observers\GameObjObservers</Filter>
+    </ClCompile>
+    <ClCompile Include="ObserverBase.cpp">
+      <Filter>Game Files\ObserverAndSubjects\Observers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -3,13 +3,14 @@
 #include <vector>
 #include <glm/glm.hpp>
 #include "Scene.h"
+#include "SubjectBase.h"
 namespace dae
 {
 	class Component;
 	class Texture2D;
 
 	// todo: this should become final.
-	class GameObject final
+	class GameObject final : public SubjectBase
 	{
 	public:
 		void Update(float deltaTime);
@@ -81,6 +82,4 @@ namespace dae
 		std::vector<dae::GameObject*> m_pVectorChildren;
 		GameObject* m_pParentGameObject;
 	};
-
-
 }
