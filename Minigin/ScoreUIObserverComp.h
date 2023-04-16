@@ -19,7 +19,17 @@ namespace dae
 		void OnNotify() override
 		{
 			//TODO: Simplify this to store things locally maybe, although this doesn't happen that often.
-			SetText(GetOutputString(m_playerNumber, GetWatchedGO()->GetComponent<ScoreComponent>()->GetScore()));
+
+			int playerScore{ GetWatchedGO()->GetComponent<ScoreComponent>()->GetScore() };
+			SetText(GetOutputString(m_playerNumber,playerScore));
+
+			if (playerScore >= 500.f)
+			{
+				std::cout << "Achievement! You get a spacewar achievement" << std::endl;
+				//Could be used in another watcher system that it gets notified to or an event queue.
+			}
+
+
 		}
 
 	private:
