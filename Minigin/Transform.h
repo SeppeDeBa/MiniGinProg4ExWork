@@ -23,6 +23,10 @@ namespace dae
 		void UpdateWorldPosition();
 		glm::vec3 GetWorldPosition();
 
+
+
+
+
 	private:
 		glm::vec3 m_localPosition;
 		glm::vec3 m_worldPosition{}; // empty initialise

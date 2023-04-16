@@ -22,5 +22,4 @@ namespace dae
 		int m_FPSPerSec;
 		TextComponent* m_pOwnersTextComponent{};
 	};
-
 }

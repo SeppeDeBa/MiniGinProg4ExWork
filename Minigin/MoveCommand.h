@@ -6,8 +6,7 @@
 #include "Transform.h"
 namespace dae
 {
-
-	class MoveCommand : public dae::GameObjectCommand
+	class MoveCommand final: public dae::GameObjectCommand
 	{
 	public:
 		MoveCommand(GameObject* actor, float speed, glm::vec2 moveDirection);

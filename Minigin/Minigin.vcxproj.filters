@@ -37,6 +37,9 @@
     <Filter Include="Game Files\ObserverAndSubjects\Observers\GameObjObservers">
       <UniqueIdentifier>{8fbb35f5-3b29-4509-9c5f-2de3f793f68b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game Files\ObjectStats">
+      <UniqueIdentifier>{f1e7d0a8-a29d-4c41-805d-43aa414af356}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Singleton.h">
@@ -147,6 +150,15 @@
     <ClInclude Include="ObserverBase.h">
       <Filter>Game Files\ObserverAndSubjects\Observers</Filter>
     </ClInclude>
+    <ClInclude Include="HealthUIObserverComp.h">
+      <Filter>Game Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="HealthComponent.h">
+      <Filter>Game Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="DamageCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ResourceManager.cpp">
@@ -253,6 +265,15 @@
     </ClCompile>
     <ClCompile Include="ObserverBase.cpp">
       <Filter>Game Files\ObserverAndSubjects\Observers</Filter>
+    </ClCompile>
+    <ClCompile Include="HealthUIObserverComp.cpp">
+      <Filter>Game Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="HealthComponent.cpp">
+      <Filter>Game Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="DamageCommand.cpp">
+      <Filter>Game Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

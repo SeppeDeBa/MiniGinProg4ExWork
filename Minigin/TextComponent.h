@@ -10,7 +10,7 @@ namespace dae
 	class TextureComponent;
 	class Font;
 	class Texture2D;
-	class TextComponent final : public Component
+	class TextComponent: public Component //Can be used on its own, removed final for resuability in UI ObserverComps
 	{
 	public:
 		TextComponent(GameObject* pOwner, const std::string& text, std::shared_ptr<Font> font);
