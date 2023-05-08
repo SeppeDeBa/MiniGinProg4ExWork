@@ -27,11 +27,10 @@ public:
 
 
 protected:
-	dae::GameObject* GetWatchedGO() const {
+	dae::GameObject* GetWatchedGO() const {	
 		if (m_watchedGO != nullptr)  return m_watchedGO;
 		else return nullptr;
 	};
-
 
 private:
 	dae::GameObject* m_watchedGO;//Game Objects are BaseSubjects

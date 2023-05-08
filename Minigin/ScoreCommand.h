@@ -19,7 +19,6 @@ namespace dae
 		}
 	private:
 		int m_ScoreToAdd;
-
 	};
 }
 

@@ -32,7 +32,7 @@ public:
 	
 	virtual void RemoveObserver(ObserverBase* observerToRemove, messageTypes message)
 	{
-		if (observerToRemove != nullptr)
+		if (observerToRemove != nullptr) //shouldnt ever happen but still checking just in case
 		{
 			auto iterator = m_observers.find(message);
 			if (iterator != m_observers.end()) //when the bucket is found in the list
@@ -86,8 +86,9 @@ public:
 				//	else ++listIterator;
 				//	//For loop inspired by Mike Shah, The observer design pattern in c++ part 4, manual iteration
 				//}
-
+			
 			}
+		
 		}
 	}
 

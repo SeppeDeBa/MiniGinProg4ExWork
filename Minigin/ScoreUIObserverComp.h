@@ -28,8 +28,6 @@ namespace dae
 				std::cout << "Achievement! You get a spacewar achievement" << std::endl;
 				//Could be used in another watcher system that it gets notified to or an event queue.
 			}
-
-
 		}
 
 	private:

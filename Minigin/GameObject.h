@@ -4,6 +4,7 @@
 #include <glm/glm.hpp>
 #include "Scene.h"
 #include "SubjectBase.h"
+
 namespace dae
 {
 	class Component;
