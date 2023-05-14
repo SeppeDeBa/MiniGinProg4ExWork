@@ -182,9 +182,6 @@
     <ClCompile Include="Font.cpp">
       <Filter>Game Files</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Game Files</Filter>
-    </ClCompile>
     <ClCompile Include="Minigin.cpp">
       <Filter>Game Files</Filter>
     </ClCompile>
