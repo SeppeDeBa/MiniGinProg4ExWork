@@ -3,7 +3,6 @@
 #include <vector>
 #include <glm/glm.hpp>
 #include "Scene.h"
-#include "SubjectBase.h"
 
 namespace dae
 {
@@ -11,7 +10,7 @@ namespace dae
 	class Texture2D;
 
 	// todo: this should become final.
-	class GameObject final : public SubjectBase
+	class GameObject final
 	{
 	public:
 		void Update(float deltaTime);
