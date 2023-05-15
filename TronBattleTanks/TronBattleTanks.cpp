@@ -1,6 +1,4 @@
 #include <SDL.h>
-
-
 #if _DEBUG
 // ReSharper disable once CppUnusedIncludeDirective
 #if __has_include(<vld.h>)
@@ -15,7 +13,6 @@
 
 //#include "TextObject.h"
 #include "GameObject.h"
-
 //#include "Component.h"
 #include "TextureComponent.h"
 #include "Scene.h"
@@ -29,9 +26,25 @@
 #include "Command.h"
 #include "GameObjectCommand.h"
 #include "MoveCommand.h"
+#include "SoundCommand.h"
+//Sound
+#include "ISoundSystem.h"
+#include "SoundServiceLocator.h"
+#include "SoundSystem.h"
+#include "LoggingSoundSystem.h"
 
 void load()
 {
+	//Sound Service:
+//#if _DEBUG
+//	SoundServiceLocator::Register_Sound_System(std::make_unique<LoggingSoundSystem>(
+//														std::make_unique<SoundSystem>()));
+//#else
+	SoundServiceLocator::Register_Sound_System(std::make_unique<SoundSystem>());
+//#endif // _DEBUG
+	auto& soundService = SoundServiceLocator::Get_Sound_System();
+	soundService.Load("Wow.wav");
+
 
 	auto& scene = dae::SceneManager::GetInstance().CreateScene("Demo");
 	//CAN APPLY RAII?
@@ -74,7 +87,7 @@ void load()
 	//2. Fill in the gameObject
 	to->AddComponent<dae::Transform>(20.f, 20.f);
 	to->AddComponent<dae::TextureComponent>(false);
-	to->AddComponent<dae::TextComponent>("numpad = movement, X = take damage, Y/B/A = different AddScore Values", scoreboardfont);
+	to->AddComponent<dae::TextComponent>("Press p1 controller Y for Owen Wilson-ing", scoreboardfont);
 	//3. Add the pointer to the GameObjectPtr Vector in the scene	
 	scene.Add(to);
 
@@ -207,7 +220,8 @@ void load()
 		std::make_unique<dae::MoveCommand>(moonObjectOne, moveSpeed,
 			glm::vec2{ 1.f, 0.f }), dae::InputType::ISHELD);
 
-
+	input.AddConsoleCommand(controllerOne, dae::Controller::ControllerButton::ButtonY,
+		std::make_unique<SoundCommand>(0), dae::InputType::ISUP);
 
 
 

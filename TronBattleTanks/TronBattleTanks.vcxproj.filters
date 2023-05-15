@@ -13,18 +13,57 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Weekly Exercise Files\SoundSystem">
+      <UniqueIdentifier>{66f2020d-5ecc-4418-8c96-544ff5472ade}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Weekly Exercise Files\SoundSystem\Interface+Locator">
+      <UniqueIdentifier>{d8c37243-75cb-4844-8e7d-f311273657b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Files\Commands">
+      <UniqueIdentifier>{00a0be33-322c-4e57-a34b-f10234c1147e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TronBattleTanks.cpp">
       <Filter>Game Files</Filter>
     </ClCompile>
-    <ClCompile Include="AudioService.cpp">
-      <Filter>Game Files</Filter>
+    <ClCompile Include="ISoundSystem.cpp">
+      <Filter>Weekly Exercise Files\SoundSystem\Interface+Locator</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundServiceLocator.cpp">
+      <Filter>Weekly Exercise Files\SoundSystem\Interface+Locator</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundSystem.cpp">
+      <Filter>Weekly Exercise Files\SoundSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="LoggingSoundSystem.cpp">
+      <Filter>Weekly Exercise Files\SoundSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="NullSoundSystem.cpp">
+      <Filter>Weekly Exercise Files\SoundSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundCommand.cpp">
+      <Filter>Game Files\Commands</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AudioService.h">
-      <Filter>Weekly Exercise Files</Filter>
+    <ClInclude Include="ISoundSystem.h">
+      <Filter>Weekly Exercise Files\SoundSystem\Interface+Locator</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundServiceLocator.h">
+      <Filter>Weekly Exercise Files\SoundSystem\Interface+Locator</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundSystem.h">
+      <Filter>Weekly Exercise Files\SoundSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="LoggingSoundSystem.h">
+      <Filter>Weekly Exercise Files\SoundSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="NullSoundSystem.h">
+      <Filter>Weekly Exercise Files\SoundSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundCommand.h">
+      <Filter>Game Files\Commands</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
